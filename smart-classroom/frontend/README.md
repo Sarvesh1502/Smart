@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Smart
-=======
 
   # Educational Platform UI Design
 
@@ -12,4 +9,3 @@
 
   Run `npm run dev` to start the development server.
   
->>>>>>> b51af5a (Ignore node_modules and clean repo)

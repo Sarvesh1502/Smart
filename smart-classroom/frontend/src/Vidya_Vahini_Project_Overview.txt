@@ -1,0 +1,329 @@
+================================================================================
+                        VIDYA VAHINI EDUCATIONAL PLATFORM
+                              PROJECT OVERVIEW
+================================================================================
+https://www.figma.com/make/RmIy6WeHRMu9ZXm0grYQQH/Educational-Platform-UI-Design?node-id=0-1&t=ysIns6GMOiZp88qR-1
+Project Name: Vidya Vahini
+Description: A colorful, modern educational platform specifically designed for 
+            rural Rajasthan students, focusing on connecting urban teachers 
+            with rural students while overcoming low bandwidth and network issues.
+
+Target Audience: Rural students in Rajasthan, India
+Primary USP: Low-bandwidth optimization and 2G/3G network compatibility
+Cultural Focus: Rajasthani-inspired design with vibrant colors and cultural elements
+Language Support: Bilingual interface (Hindi/English) - Currently converted to English
+
+================================================================================
+                              CURRENT STATUS
+================================================================================
+
+Development Phase: Frontend Implementation Complete (Phase 1)
+Language Conversion: Successfully converted from Hindi to English across:
+  ✓ LandingPage component
+  ✓ AuthPage component
+  ✓ AdminDashboard component
+  ✓ FacultyDashboard component
+  
+Pending Language Conversion:
+  - StudentDashboard component (mentioned as needing completion)
+
+================================================================================
+                              ARCHITECTURE
+================================================================================
+
+Frontend Framework: React with TypeScript
+Styling: Tailwind CSS v4.0
+Component Library: shadcn/ui components
+State Management: React useState (local state)
+Build Tool: Not specified (likely Vite or Create React App)
+
+Application Structure:
+- Single Page Application (SPA)
+- Role-based routing and components
+- Three main user roles: Admin, Faculty, Student
+- Page-based navigation system
+
+================================================================================
+                            FILE STRUCTURE
+================================================================================
+
+Root Directory:
+├── App.tsx                    // Main application entry point
+├── Attributions.md           // Credits and attributions
+├── Backend_Requirements.md   // Backend specifications document
+├── components/
+│   ├── AdminDashboard.tsx    // Admin role dashboard
+│   ├── AuthPage.tsx          // Authentication/login page
+│   ├── DoubtSection.tsx      // Doubt resolution component
+│   ├── FacultyDashboard.tsx  // Faculty role dashboard
+│   ├── LandingPage.tsx       // Main landing page
+│   ├── StudentDashboard.tsx  // Student role dashboard
+│   ├── figma/
+│   │   └── ImageWithFallback.tsx  // Protected image component
+│   └── ui/                   // shadcn/ui component library (39 components)
+├── guidelines/
+│   └── Guidelines.md         // Development guidelines (currently minimal)
+└── styles/
+    └── globals.css           // Tailwind v4 global styles and design tokens
+
+================================================================================
+                              CORE COMPONENTS
+================================================================================
+
+1. App.tsx (Main Application)
+   - Manages global state for user role and current page
+   - Handles authentication flow
+   - Routes between different components based on user role
+   - Implements logout functionality
+
+2. LandingPage.tsx
+   - Welcome page for new users
+   - Platform introduction and features
+   - Navigation to authentication page
+
+3. AuthPage.tsx
+   - User authentication interface
+   - Role-based login system
+   - Supports Admin, Faculty, and Student roles
+
+4. Role-Based Dashboards:
+   - AdminDashboard.tsx: Full system access, user management, analytics
+   - FacultyDashboard.tsx: Course creation, student management, doubt resolution
+   - StudentDashboard.tsx: Course access, doubt posting, progress tracking
+
+5. DoubtSection.tsx
+   - VS Code-style dual-pane doubt resolution system
+   - Real-time chat interface for student-teacher interaction
+
+================================================================================
+                            DESIGN SYSTEM
+================================================================================
+
+Color Palette (Rajasthani-inspired):
+- Primary: Royal Rajasthani Blue (#1e40af)
+- Secondary: Saffron/Marigold (#f59e0b)
+- Accent: Rajasthani Red (#dc2626)
+- Background: Warm cream (#fef7f0)
+- Foreground: Dark brown (#2d1810)
+- Success: Vibrant Green (#059669)
+- Warning: Amber (#d97706)
+
+Typography:
+- Base font size: 16px
+- Font weights: Normal (400), Medium (500)
+- Responsive text scaling with CSS custom properties
+
+Layout:
+- Border radius: 0.875rem (14px)
+- Consistent spacing using Tailwind utilities
+- Mobile-first responsive design approach
+
+Chart Colors (for analytics):
+- Chart 1: Red (#dc2626)
+- Chart 2: Saffron (#f59e0b)
+- Chart 3: Royal Blue (#1e40af)
+- Chart 4: Green (#059669)
+- Chart 5: Purple (#7c3aed)
+
+================================================================================
+                           USER ROLES & PERMISSIONS
+================================================================================
+
+1. Admin Role:
+   - Full system access
+   - User management and analytics
+   - Content moderation capabilities
+   - System configuration
+
+2. Faculty Role:
+   - Course creation and management
+   - Student management within courses
+   - Doubt resolution and communication
+   - Meeting scheduling and conduct
+
+3. Student Role:
+   - Course enrollment and access
+   - Doubt posting and communication
+   - Meeting attendance
+   - Progress tracking
+
+================================================================================
+                           TECHNICAL FEATURES
+================================================================================
+
+Implemented Features:
+- Role-based authentication system
+- Responsive design with Rajasthani cultural elements
+- Component-based architecture
+- Type-safe TypeScript implementation
+- shadcn/ui component integration
+- Dark mode support (via CSS custom properties)
+
+Low-Bandwidth Optimization Features (Planned/UI Ready):
+- Data usage tracking displays
+- File size indicators
+- 2G/3G network compatibility messaging
+- Bandwidth-aware content delivery
+- Progressive loading interfaces
+
+Communication Features (Planned/UI Ready):
+- VS Code-style dual-pane doubt resolution
+- Real-time chat interface
+- Meeting capabilities
+- Notification systems
+
+================================================================================
+                           COMPONENT LIBRARY
+================================================================================
+
+Available shadcn/ui Components (39 total):
+✓ accordion          ✓ alert-dialog      ✓ alert
+✓ aspect-ratio       ✓ avatar            ✓ badge
+✓ breadcrumb         ✓ button            ✓ calendar
+✓ card               ✓ carousel          ✓ chart
+✓ checkbox           ✓ collapsible       ✓ command
+✓ context-menu       ✓ dialog            ✓ drawer
+✓ dropdown-menu      ✓ form              ✓ hover-card
+✓ input-otp          ✓ input             ✓ label
+✓ menubar            ✓ navigation-menu   ✓ pagination
+✓ popover            ✓ progress          ✓ radio-group
+✓ resizable          ✓ scroll-area       ✓ select
+✓ separator          ✓ sheet             ✓ sidebar
+✓ skeleton           ✓ slider            ✓ sonner
+✓ switch             ✓ table             ✓ tabs
+✓ textarea           ✓ toggle-group      ✓ toggle
+✓ tooltip
+
+Special Components:
+- ImageWithFallback: Protected image component for optimized loading
+- DoubtSection: Custom component for student-teacher communication
+
+================================================================================
+                            STATE MANAGEMENT
+================================================================================
+
+Current Implementation:
+- Local React useState for application state
+- Props drilling for component communication
+- No external state management library
+
+State Structure:
+- currentPage: 'landing' | 'auth' | 'dashboard'
+- userRole: 'admin' | 'faculty' | 'student' | null
+
+Authentication Flow:
+1. User starts on landing page
+2. Navigates to auth page
+3. Selects role and authenticates
+4. Redirected to role-specific dashboard
+5. Logout returns to landing page
+
+================================================================================
+                         RESPONSIVE DESIGN
+================================================================================
+
+Approach: Mobile-first responsive design
+Breakpoints: Using Tailwind CSS default breakpoints
+- sm: 640px and up
+- md: 768px and up
+- lg: 1024px and up
+- xl: 1280px and up
+- 2xl: 1536px and up
+
+Cultural Considerations:
+- Vibrant colors reflecting Rajasthani culture
+- High contrast for better visibility in various lighting conditions
+- Large touch targets for mobile users
+- Clear visual hierarchy for users with varying digital literacy
+
+================================================================================
+                           DEVELOPMENT SETUP
+================================================================================
+
+Required Dependencies:
+- React 18+
+- TypeScript
+- Tailwind CSS v4.0
+- shadcn/ui components
+- lucide-react (for icons)
+
+Development Guidelines:
+- Use TypeScript for type safety
+- Follow shadcn/ui component patterns
+- Maintain consistent spacing and typography
+- Preserve cultural design elements
+- Avoid font size/weight classes unless specifically needed
+
+Code Structure:
+- Components in `/components` directory
+- UI components in `/components/ui`
+- Global styles in `/styles/globals.css`
+- Type definitions in individual component files
+
+================================================================================
+                             NEXT STEPS
+================================================================================
+
+Immediate Tasks:
+1. Complete language conversion for StudentDashboard component
+2. Implement backend integration points
+3. Add real-time communication features
+4. Implement low-bandwidth optimization
+
+Backend Integration Requirements:
+- Authentication API integration
+- Course management API
+- Doubt resolution system backend
+- Meeting platform integration
+- Analytics and reporting APIs
+
+Performance Optimization:
+- Image optimization and compression
+- Code splitting for large components
+- Lazy loading implementation
+- Bundle size optimization
+
+Testing Requirements:
+- Unit tests for components
+- Integration tests for user flows
+- Accessibility testing
+- Performance testing on low-bandwidth connections
+
+================================================================================
+                              NOTES
+================================================================================
+
+Important Considerations:
+- Platform is specifically designed for rural connectivity challenges
+- Cultural sensitivity is crucial for user adoption
+- Low-bandwidth optimization is a core requirement
+- Bilingual support may need to be re-implemented
+- Backend requirements document is comprehensive and ready
+
+Protected Files:
+- /components/figma/ImageWithFallback.tsx (system component)
+
+Development Standards:
+- Maintain Rajasthani cultural design elements
+- Ensure accessibility for users with varying digital literacy
+- Optimize for low-bandwidth scenarios
+- Use consistent component patterns
+- Follow TypeScript best practices
+
+Contact & Collaboration:
+- Backend team should reference Backend_Requirements.md
+- Frontend changes should maintain cultural design consistency
+- All modifications should consider rural user experience
+
+================================================================================
+                           END OF DOCUMENT
+================================================================================
+
+Generated on: [Current Date]
+Project Phase: Frontend Implementation Complete
+Next Phase: Backend Integration & Optimization
+
+For technical questions or clarifications, refer to:
+- Backend_Requirements.md for backend specifications
+- guidelines/Guidelines.md for development guidelines
+- Individual component files for implementation details
