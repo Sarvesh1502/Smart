@@ -19,3 +19,10 @@ yarn-error.log*
 # system files
 .DS_Store
 Thumbs.db
+# Secrets
+credentials.json
+*.pem
+*.key
+*.crt
+*.pfx
+
